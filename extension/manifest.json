@@ -1,0 +1,47 @@
+{
+  "name": "magic-dom",
+  "version": "0.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "logo.png"
+  },
+  "action": {
+    "default_title": "Magic DOM",
+    "default_icon": "logo.png"
+  },
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "src/contentScript/index.ts-loader.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "sidePanel",
+    "storage",
+    "contextMenus",
+    "tabs",
+    "activeTab",
+    "nativeMessaging"
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "**/*",
+        "*"
+      ],
+      "use_dynamic_url": false
+    }
+  ]
+}
