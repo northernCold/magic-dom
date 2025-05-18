@@ -1,7 +1,7 @@
 let highlightedElements: HTMLElement[] = [];
 
 // 监听来自 side panel 的消息
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((message, _, sendResponse) => {
     try {
         switch (message.type) {
             case 'highlight':

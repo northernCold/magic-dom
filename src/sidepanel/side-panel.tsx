@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { DomOperator } from './components/dom-operator';
 import { SavedOperations } from './components/saved-operations';
+// @ts-ignore
 import './side-panel.css';
 import { Toaster } from "@/components/ui/sonner"
 
